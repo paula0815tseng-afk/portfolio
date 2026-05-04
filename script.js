@@ -95,7 +95,7 @@ if (lightbox) {
 
   function openLb(i) {
     current = i;
-    lbImg.src = items[i].src;
+    lbImg.src = items[i].dataset.full || items[i].src;
     resetLb();
     lightbox.classList.add('active');
   }
@@ -166,8 +166,19 @@ if (lightbox) {
   /* Auto-open from homepage masonry click */
   const openParam = new URLSearchParams(window.location.search).get('img');
   if (openParam) {
-    const idx = items.findIndex(img => img.getAttribute('src') === openParam);
-    if (idx !== -1) setTimeout(() => openLb(idx), 500);
+    const idx = items.findIndex(img =>
+      (img.dataset.full || img.getAttribute('src')) === openParam
+    );
+    if (idx !== -1) {
+      let opened = false;
+      const doOpen = () => { if (opened) return; opened = true; openLb(idx); };
+      if (overlay) {
+        overlay.addEventListener('animationend', doOpen, { once: true });
+        setTimeout(doOpen, 800);
+      } else {
+        setTimeout(doOpen, 100);
+      }
+    }
   }
 }
 
