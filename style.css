@@ -270,7 +270,7 @@ footer p { font-size: 0.75rem; color: var(--gray); }
 
 /* ─── WORK Overview Page ─── */
 .work-page-header {
-  padding: 10rem 4rem 3rem; border-bottom: 1px solid var(--border);
+  padding: 10rem 4rem 3rem;
 }
 .work-page-header-top {
   display: flex; justify-content: space-between; align-items: flex-end;
