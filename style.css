@@ -273,17 +273,14 @@ footer p { font-size: 0.75rem; color: var(--gray); }
   padding: 10rem 4rem 4rem; border-bottom: 1px solid var(--border);
   display: flex; justify-content: space-between; align-items: flex-end;
 }
+.work-page-left { display: flex; flex-direction: column; gap: 1.25rem; }
 .work-page-title { font-size: clamp(3rem, 7vw, 6rem); font-weight: 300; letter-spacing: -0.03em; line-height: 1; }
 .work-page-count { font-size: 0.75rem; color: var(--gray); letter-spacing: 0.1em; margin-bottom: 0.5rem; }
 
 /* ─── Work Filter Bar ─── */
-.work-filter {
-  display: flex; flex-wrap: wrap; gap: 0.5rem 2rem;
-  padding: 1.25rem 4rem;
-  border-bottom: 1px solid var(--border);
-}
+.work-filter { display: flex; flex-wrap: wrap; gap: 0.35rem 1.25rem; }
 .work-filter a {
-  font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+  font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--gray); text-decoration: none;
   padding-bottom: 2px; border-bottom: 1px solid transparent;
   transition: color 0.2s, border-color 0.2s;
