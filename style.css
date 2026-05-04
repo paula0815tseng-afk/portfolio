@@ -274,12 +274,13 @@ footer p { font-size: 0.75rem; color: var(--gray); }
 }
 .work-page-header-top {
   display: flex; justify-content: space-between; align-items: flex-end;
+  margin-bottom: 1.5rem;
 }
 .work-page-title { font-size: clamp(3rem, 7vw, 6rem); font-weight: 300; letter-spacing: -0.03em; line-height: 1; }
 .work-page-count { font-size: 0.75rem; color: var(--gray); letter-spacing: 0.1em; margin-bottom: 0.5rem; }
 
 /* ─── Work Filter Bar ─── */
-.work-filter { display: flex; flex-wrap: wrap; gap: 0.35rem 1.25rem; padding: 1.75rem 4rem; border-bottom: 1px solid var(--border); }
+.work-filter { display: flex; flex-wrap: wrap; gap: 0.35rem 1.25rem; }
 .work-filter a {
   font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--gray); text-decoration: none;
@@ -476,7 +477,8 @@ footer p { font-size: 0.75rem; color: var(--gray); }
   .about-contact { align-items: flex-start; }
   footer { padding: 2rem 1.5rem; flex-direction: column; gap: 1rem; }
   .work-page-header { padding: 8rem 1.5rem 2rem; }
-  .work-filter { gap: 0.3rem 1rem; padding: 1.25rem 1.5rem; }
+  .work-page-header-top { margin-bottom: 1rem; }
+  .work-filter { gap: 0.3rem 1rem; }
   .cat-page-header { padding: 6rem 1.5rem 2rem; }
   .sub-section { padding-left: 1.5rem; padding-right: 1.5rem; }
   .gallery-grid { columns: 2; }
