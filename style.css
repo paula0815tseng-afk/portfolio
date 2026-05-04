@@ -62,8 +62,8 @@ body {
 }
 body:has(a:hover) .cursor { width: 12px; height: 12px; }
 body:has(a:hover) .cursor-ring { width: 50px; height: 50px; opacity: 0.5; }
-body:has(.lightbox.active) .cursor { background: white; }
-body:has(.lightbox.active) .cursor-ring { border-color: white; }
+.lb-open .cursor { background: white; }
+.lb-open .cursor-ring { border-color: white; }
 
 /* ─── Page Transition ─── */
 .page-overlay {

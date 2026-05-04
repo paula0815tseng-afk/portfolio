@@ -98,10 +98,12 @@ if (lightbox) {
     lbImg.src = items[i].dataset.full || items[i].src;
     resetLb();
     lightbox.classList.add('active');
+    document.body.classList.add('lb-open');
   }
 
   function closeLb() {
     lightbox.classList.remove('active');
+    document.body.classList.remove('lb-open');
     resetLb();
   }
 
