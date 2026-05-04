@@ -160,7 +160,7 @@ nav::after {
 .marquee-track:active { cursor: grabbing; }
 .marquee-inner {
   display: flex; gap: 1.5rem;
-  animation: marquee-scroll 32s linear infinite;
+  animation: marquee-scroll 55s linear infinite;
   width: max-content;
 }
 .marquee-track:hover .marquee-inner { animation-play-state: paused; }

@@ -162,5 +162,12 @@ if (lightbox) {
     if (e.key === '+' || e.key === '=') { lbScale = Math.min(lbScale + 0.2, 5); applyLbTransform(true); }
     if (e.key === '-') { lbScale = Math.max(lbScale - 0.2, 0.5); applyLbTransform(true); }
   });
+
+  /* Auto-open from homepage masonry click */
+  const openParam = new URLSearchParams(window.location.search).get('img');
+  if (openParam) {
+    const idx = items.findIndex(img => img.getAttribute('src') === openParam);
+    if (idx !== -1) setTimeout(() => openLb(idx), 500);
+  }
 }
 
