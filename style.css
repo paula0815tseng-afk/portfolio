@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 
 :root {
   --white: #ffffff;
@@ -275,11 +276,26 @@ footer p { font-size: 0.75rem; color: var(--gray); }
 .work-page-title { font-size: clamp(3rem, 7vw, 6rem); font-weight: 300; letter-spacing: -0.03em; line-height: 1; }
 .work-page-count { font-size: 0.75rem; color: var(--gray); letter-spacing: 0.1em; margin-bottom: 0.5rem; }
 
+/* ─── Work Filter Bar ─── */
+.work-filter {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 2rem;
+  padding: 1.25rem 4rem;
+  border-bottom: 1px solid var(--border);
+}
+.work-filter a {
+  font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--gray); text-decoration: none;
+  padding-bottom: 2px; border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+.work-filter a:hover { color: var(--black); border-bottom-color: var(--black); }
+[data-theme="dark"] .work-filter a:hover { color: var(--white); border-bottom-color: var(--white); }
+
 .cat-grid {
   display: grid; grid-template-columns: repeat(2, 1fr);
   gap: 1px; background: var(--border);
 }
-.cat-card { background: var(--white); text-decoration: none; color: inherit; display: block; }
+.cat-card { scroll-margin-top: 5.5rem; background: var(--white); text-decoration: none; color: inherit; display: block; }
 .cat-img { aspect-ratio: 16/9; overflow: hidden; }
 .cat-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s var(--ease); }
 .cat-card:hover .cat-img img { transform: scale(1.04); }
