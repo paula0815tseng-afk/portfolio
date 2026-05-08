@@ -115,20 +115,21 @@ nav::after {
 /* ─── Hero ─── */
 .hero {
   min-height: 100vh; padding: 10rem 4rem 4rem;
-  display: flex; flex-direction: column; justify-content: center; position: relative;
+  display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative;
+  text-align: center;
 }
 .hero-eyebrow {
   font-size: 0.72rem; letter-spacing: 0.25em; color: var(--gray);
   text-transform: uppercase; margin-bottom: 2.5rem; display: block;
 }
 .hero-title {
-  font-size: clamp(3.2rem, 9vw, 8rem); font-weight: 300;
+  font-size: clamp(2.56rem, 7.2vw, 6.4rem); font-weight: 300;
   line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 3rem;
 }
-.hero-title em { font-style: italic; font-weight: 300; }
+.hero-title em { font-style: normal; font-weight: 300; }
 .hero-desc {
   font-size: 1rem; font-weight: 300; color: var(--gray);
-  line-height: 1.85; max-width: 38ch;
+  line-height: 1.85; max-width: 38ch; margin-left: auto; margin-right: auto;
 }
 .hero-scroll {
   position: absolute; bottom: 3.5rem; right: 4rem;
@@ -407,7 +408,7 @@ footer p { font-size: 0.75rem; color: var(--gray); }
   line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 2rem;
 }
 .about-name-zh {
-  font-size: clamp(1rem, 2.5vw, 1.8rem); font-style: italic;
+  font-size: clamp(1rem, 2.5vw, 1.8rem); font-style: normal;
   letter-spacing: 0.05em; color: var(--gray);
 }
 .about-role {
